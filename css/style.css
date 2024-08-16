@@ -1,0 +1,42 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+}
+
+div, img {
+    margin: 0px;
+}
+
+body {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+}
+
+.left {
+    width: 30vw;
+    height: 100%;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .mask {
+        align-self: stretch;
+        background-color: black;
+        opacity: 40%;
+        margin-top: 20vh;
+        text-align: center;
+    }
+    .footer {
+        color: white;
+        align-self: center;
+    }
+}
+

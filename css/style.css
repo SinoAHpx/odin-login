@@ -4,6 +4,8 @@ body, html {
     margin: 0px;
     padding: 0px;
     font-family: Roboto;
+
+    --theme-color: rgb(255, 204, 138);
 }
 
 div, img {
@@ -48,13 +50,97 @@ a {
 .right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
     .info {
-        background-color: rgb(234, 234, 234);
-        padding: 60px;
+        background-color: rgb(250, 250, 250);
+        padding: 50px;
+        display: flex;
+        align-items: flex-end;
     }
     .info p {
         font-weight: bold;
-        font-size: 24px;
+        font-size: 20px;
+        
+    }
+    .login {
+        padding-left: 50px;
+        padding-top: 50px;
+        box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.2);
+        position: relative;
+        h2 {
+            margin-top: 0px;
+        }
+        input {
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            padding: 8px;
+            background-color: transparent;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 200px;
+        }
+        input:focus {
+            border: 1px solid var(--theme-color);
+            outline: 1px solid var(--theme-color);
+            box-shadow: 0 1px 10px -1px gray;
+        }
+        input:invalid{
+            border: 1px solid red;
+        }
+        .invalid {
+            border: 1px solid red;
+        }
+        #passwordHint {
+            margin: 0;
+            text-align: start;
+            position: absolute;
+            font-size: 10px;
+            bottom: 1%;
+            left: 7%;
+            color: red;
+            font-style: italic;
+            visibility: hidden;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 500px;
+            gap: 30px;
+            padding-bottom: 20px;
+            
+        }
+
+    }
+    .action {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        gap: 20px;
+        background-color: rgb(250, 250, 250);
+        flex-grow: 1;
+        button {
+            padding: 10px;
+            border: none;
+            background-color: var(--theme-color);
+            border-radius: 10px;
+            width: 200px;
+        }
+        button:hover {
+            box-shadow: 0 1px 10px -5px gray;
+            background-color: rgb(255, 213, 159);
+        }
+        button:active {
+            background-color: rgb(255, 241, 223);
+
+        }
+        a {
+            color: var(--theme-color);
+            font-weight: bold;
+        }
     }
 }
+
